@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Norce';
+    src: url('./fonts/Norse-Bold.otf')
+}
+
+:root {
+    --accent-colour: #596D48;
+    --background-clr-muted: #F9FAFB;
+    --background-clr: #FFFFFF;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+}
+
+.picture-container {
+    background-image: url('pictures/green-leaf.avif');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 600px;
+    outline: 10px solid red;
+    background-size: cover;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+} 
+
+.odin-band {
+    position: absolute;
+    width: 600px;
+    top: 20%;
+}
+
+.picture-text {
+    width: 100%;
+    text-align: center;
+    font-size: 80px;z-index: ;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--background-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.TOP-logo {
+    height: 13rem;
+    color: var(--background-clr-muted);
+}
+
+.TOP-name {
+    object-position: center;
+    font-family: Norce;
+    font-size: 140px;
+    
+}
