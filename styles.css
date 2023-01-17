@@ -19,6 +19,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
+    background: var(--background-clr-muted)
 
 }
 
@@ -30,15 +31,16 @@ body {
     outline: 10px solid red;
     background-size: cover;
     position: relative;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;  */
+    min-height: 300px;
+
 } 
 
 .odin-band {
-    position: absolute;
-    width: 600px;
+    position: absolute; 
+    width: 100%; 
     top: 20%;
+    overflow: hidden;
+    /* transform: translatey(100%) */
 }
 
 .picture-text {
