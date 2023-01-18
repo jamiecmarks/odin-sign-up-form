@@ -11,38 +11,72 @@
 
 <body>
     <div class="picture-container">
-        
+
         <div class="odin-band">
             <div class="picture-text">
                 <img src="/pictures/odin-lined.png" alt="odin logo" class="TOP-logo">
                 <div class="TOP-name">ODIN</div>
             </div>
         </div>
-        
+
     </div>
     <div class="main-section">
         <div class="top-text">
-           <p>This is not a real online service! You know you need something like this in your
-            life to help you realise your deepest dreams.
-           </p> 
-           <p>
-            Sign up <em>now</em> to get started.
-           </p>
-           <p>
-            <br> You <em>know</em> you want to.
-           </p>
+            <p>This is not a real online service! You know you need something like this in your
+                life to help you realise your deepest dreams.
+            </p>
+            <p>
+                Sign up <em>now</em> to get started.
+            </p>
+            <p>
+                <br> You <em>know</em> you want to.
+            </p>
         </div>
-    
-        <div class="main-form">
-            <form action="#" method="get">
-                <div class="form-head">Let's do this!</div>
 
+        <div class="main-form">
+            <div class="form-head">Let's do this!</div>
+            <form action="#" method="get" id="main_form">
+
+
+                <div class="row 1">
+                    <div class="input-container"><label for="first_name"> FIRST NAME</label><input minlength="2" maxlength="25" type="text"
+                            id="first_name" name="first_name"></div>
+                    <div class="input-container"><label for="last_name">LAST NAME</label><input minlength="2" maxlength="25" name="last_name"
+                            id="last_name" type="text"></div>
+                </div>
+                <div class="row 2">
+                    <div class="input-container"><label for="email">EMAIL</label><input type="email" name="email"
+                            id="email"></div>
+                    <div class="input-container"><label for="phone_num">PHONE NUMBER</label><input minlength="10" maxlength="16" type="tel"
+                            name="phone_number" id="phone_number" class=""></div>
+                </div>
+                <div class="row 3">
+                    <div class="input-container"><label for="pwd">PASSWORD</label><input type="password" name="pwd"
+                            id="pwd"></div>
+                    <div class="input-container"><label for="pwd-conf">CONFIRM PASSWORD</label><input type="password"
+                            name="pwd-conf" id="pwd-conf" class=""></div>
+                </div>
+
+
+                
             </form>
         </div>
-
-
+        <button type="submit" form="main_form">Create Account</button>
+        
+       
 
     </div>
+
+    <script>
+        const btn = document.querySelector('button[type="submit"]')
+
+        const pwds = document.querySelectorAll('input[type="password"]')
+
+        btn.addEventListener('click' , (e) =>{
+            
+        })
+
+    </script>
 
 </body>
 
