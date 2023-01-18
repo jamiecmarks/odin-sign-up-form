@@ -121,7 +121,7 @@ input {
     flex: 1 1 300px;
     height: 1.8rem;
     font-size: 1.3rem;
-    padding: 15px 10px;
+    padding: 20px 10px;
 
     border-radius: 5px;
     border: 2px solid #E6E8EC;
@@ -162,9 +162,27 @@ button[type="submit"] {
 
 }
 
+footer {
+    margin-left: 40px;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+footer > a {
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--accent-clr)
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+
 button:hover {
     background: linear-gradient( var(--accent-clr), #376909);
     font-size: 23px;
+    cursor: pointer;
 }
 
 input:invalid {
@@ -172,6 +190,20 @@ input:invalid {
     background-color: rgba(255, 0, 0, 0.115) ;
 }
 
-.error {
-   border: 2px solid red; 
+.input-container > .error {
+   border: 2px solid red !important; 
+}
+
+.row.three {
+    position:relative;
+}
+
+.row.three > .input-container.pwd.error-cont ::after {
+    content:"*Passwords don't match";
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    left: 0px;
+    bottom:-20px;
+
 }

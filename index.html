@@ -39,41 +39,60 @@
 
 
                 <div class="row 1">
-                    <div class="input-container"><label for="first_name"> FIRST NAME</label><input minlength="2" maxlength="25" type="text"
-                            id="first_name" name="first_name"></div>
-                    <div class="input-container"><label for="last_name">LAST NAME</label><input minlength="2" maxlength="25" name="last_name"
-                            id="last_name" type="text"></div>
+                    <div class="input-container"><label for="first_name"> FIRST NAME</label><input minlength="2"
+                            maxlength="25" type="text" id="first_name" name="first_name"></div>
+                    <div class="input-container"><label for="last_name">LAST NAME</label><input minlength="2"
+                            maxlength="25" name="last_name" id="last_name" type="text"></div>
                 </div>
                 <div class="row 2">
                     <div class="input-container"><label for="email">EMAIL</label><input type="email" name="email"
                             id="email"></div>
-                    <div class="input-container"><label for="phone_num">PHONE NUMBER</label><input minlength="10" maxlength="16" type="tel"
-                            name="phone_number" id="phone_number" class=""></div>
+                    <div class="input-container"><label for="phone_num">PHONE NUMBER</label><input minlength="10"
+                            maxlength="16" type="tel" name="phone_number" id="phone_number" class=""></div>
                 </div>
-                <div class="row 3">
-                    <div class="input-container"><label for="pwd">PASSWORD</label><input type="password" name="pwd"
-                            id="pwd"></div>
-                    <div class="input-container"><label for="pwd-conf">CONFIRM PASSWORD</label><input type="password"
-                            name="pwd-conf" id="pwd-conf" class=""></div>
+                <div class="row three">
+                    <div class="input-container pwd" id="pwd-cont"><label for="pwd">PASSWORD</label><input minlength="8" type="password"
+                            name="pwd" id="pwd"></div>
+                    <div class="input-container"><label for="pwd-conf">CONFIRM PASSWORD</label><input minlength="8"
+                            type="password" name="pwd-conf" id="pwd-conf" class=""></div>
                 </div>
 
 
-                
+
             </form>
         </div>
         <button type="submit" form="main_form">Create Account</button>
-        
-       
+
+        <footer>
+            Already have an account? <a href="#">Sign in</a>
+        </footer>
 
     </div>
+
+
 
     <script>
         const btn = document.querySelector('button[type="submit"]')
 
         const pwds = document.querySelectorAll('input[type="password"]')
 
-        btn.addEventListener('click' , (e) =>{
-            
+        const pwd_cont = document.getElementById('pwd-cont')
+
+
+        pwds[1].addEventListener('input', (e) => {
+            console.log(pwds[0].value === pwds[1].value);
+            if (pwds[0].value !== pwds[1].value) {
+                pwds.forEach((item) => {
+                    pwd_cont.classList.add('error-cont');
+                    item.classList.add('error')
+                })
+            } else {
+                pwds.forEach((item) => {
+                    pwd_cont.classList.remove('error-cont');
+                    item.classList.remove('error')
+                })
+
+            }
         })
 
     </script>
